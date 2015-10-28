@@ -5,4 +5,7 @@
     <string name="title_activity_new_task">新项目</string>
     <string name="hello_world">你好，世界！</string>
     <string name="task_name">项目名称</string>
+    <string name="task_description">项目描述</string>
+    <string name="task_manager_mh">项目负责人：</string>
+    <string name="title_activity_my_profile">我的资料</string>
 </resources>

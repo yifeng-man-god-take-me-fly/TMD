@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context="com.yfnsdwf.tmd.NewTaskActivity">
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -27,16 +28,42 @@
                 android:orientation="vertical">
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="80dp">
                     <EditText
                         style="@style/AppTheme.EditText.Light"
+                        android:id="@+id/task_name_edit_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/color_white"
-                        android:textSize="24sp"
+                        android:textSize="34sp"
                         android:singleLine="true"
                         android:ellipsize="end"
                         android:hint="@string/task_name"/>
+                </android.support.design.widget.TextInputLayout>
+                <TextView
+                    android:id="@+id/task_manager_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/task_manager_mh"
+                    android:textSize="17sp" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+                    <EditText
+                        style="@style/AppTheme.EditText.Light"
+                        android:id="@+id/task_description_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:textColor="@color/color_white"
+                        android:textSize="17sp"
+                        android:hint="@string/task_description"
+                        android:text="你你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好好你好你好你好你好你好你好你好你好你好你好你好你好你好你好"
+                        android:singleLine="false"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:scrollbars="vertical"/>
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
