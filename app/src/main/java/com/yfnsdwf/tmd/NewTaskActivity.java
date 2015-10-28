@@ -17,7 +17,9 @@ public class NewTaskActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_task);
 
-        mToolbar = (Toolbar)findViewById(R.id.task_name_toolbar);
+        mToolbar = (Toolbar)findViewById(R.id.new_task_toolbar);
+        mToolbar.setNavigationIcon(R.drawable.ic_done_white_24dp);
+        mToolbar.setTitle(R.string.title_activity_new_task);
 
         setSupportActionBar(mToolbar);
     }
@@ -30,10 +32,12 @@ public class NewTaskActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 }
