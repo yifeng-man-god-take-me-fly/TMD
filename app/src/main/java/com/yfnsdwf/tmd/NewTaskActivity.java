@@ -9,30 +9,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
-    private FloatingActionButton mAddTaskFab;
+public class NewTaskActivity extends AppCompatActivity {
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_new_task);
 
-        Toolbar mToolbar = (Toolbar)findViewById(R.id.main_toolbar);
-
-        mAddTaskFab = (FloatingActionButton)findViewById(R.id.add_task_fab);
-        mAddTaskFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NewTaskActivity.class));
-            }
-        });
+        mToolbar = (Toolbar)findViewById(R.id.task_name_toolbar);
 
         setSupportActionBar(mToolbar);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_new_task, menu);
         return true;
     }
 

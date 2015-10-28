@@ -1,8 +1,17 @@
 <resources>
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Base.AppTheme">
     </style>
-
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/main_500</item>
+        <item name="colorPrimaryDark">@color/main_700</item>
+    </style>
+    <style name="AppTheme.EditText.Light" parent="Widget.AppCompat.EditText">
+        <!--<item name="android:background">?attr/editTextBackground</item>-->
+        <!--<item name="android:textColor">?attr/editTextColor</item>-->
+        <!--<item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>-->
+    </style>
 </resources>
